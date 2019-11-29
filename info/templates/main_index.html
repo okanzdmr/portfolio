@@ -1,0 +1,213 @@
+{% extends "base.html" %}
+{% block css  %}
+    {% load static %}
+
+{% endblock %}
+{#{% block nav %}#}
+{#    <div class="collapse navbar-collapse " id="navbarInfo">#}
+{#        <ul class="navbar-nav">#}
+{#            <li class="nav-item ">#}
+{#                <a class="nav-link" href="#education">Education <span class="sr-only">Home</span></a>#}
+{#            </li>#}
+{#            <li class="nav-item">#}
+{#                <a class="nav-link" href="//codeply.com">&#123;Skills&#125;</a>#}
+{#            </li>#}
+{#            <li class="nav-item">#}
+{#                <a class="nav-link" href="#">Contact</a>#}
+{#            </li>#}
+{#        </ul>#}
+{#    </div>#}
+{#{% endblock %}#}
+{% block page_content %}
+
+    <div class="row " style="margin:0;padding:0;">
+        {#        info and img#}
+        <div class="col-md-4 offset-md-1 bg-light  " style="" >
+            <div class="sticky-top divide  " >
+
+                <div class="pt-2">
+                    <img class="mx-auto shadow d-block img-responsive rounded-circle" src="{% static "images/profile.png" %}"  style="width: 50%;" alt="">
+                </div>
+
+                <div class="text-center pt-1 ">
+                    <h4><span>OKAN </span><span class="cvColor">ÖZDEMİR</span></h4>
+                </div>
+                <div class="text-center">
+                    <a href="https://www.linkedin.com/in/okan-ozdemir/?locale=tr_TR" title="linkedin" ><span class="fa fa-2x fa-linkedin icon-custom-black"> </span></a>
+                    <a href="https://github.com/okanzdmr"><span class="fa fa-2x fa-github icon-custom-black" title="github"> </span></a>
+                    <a href="https://codepen.io/knzdmr"><span class="fa fa-2x fa-codepen icon-custom-black" title="codepen"> </span></a>
+                    <a href="https://www.facebook.com/okan.ozdemir.1865"><span class="fa fa-2x fa-facebook icon-custom-black" title="facebook"> </span></a>
+                    <a href="https://www.instagram.com/zdmrkn/"><span class="fa fa-2x fa-instagram icon-custom-black" title="instagram"> </span></a>
+                </div>
+                <hr>
+                <div class="cvAbout" >
+                    <p>In addition to the training I have received in university, I have gained such skills as problem solving, multitasking, project management, time planning, team leadership and teamwork thanks to different kind of projects I involved and my colleagues  at home and abroad. I can easily adapt to the new technologies and the to-day, through my skill of self-learning. </p>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="col-md-6 divide  text-light " style="background: black; margin: 0;padding: 0" >
+            {#            education#}
+            <div class=" mt-2 pt-1 pb-1 text-center" style="padding-top: 5%"><h4>Education</h4></div>
+            <div class="cvPart" >
+
+
+
+
+                <span class="fa fa-graduation-cap"></span><strong><span class=""> ANADOLU UNIVERSITY-TURKEY</span></strong>
+                <small ><span  >(2012-2017)</span></small>
+                <br/>
+                <small>
+                    <span class="textInfo">COMPUTER ENGINEERING</span>
+                    <br />
+                    <span class="textInfo"> Ed. Language:%100 English</span>
+                    <br />
+                    <span class="textInfo" > GPA:3.10</span>
+                    <br />
+                </small>
+
+                <span class="fa fa-graduation-cap"></span><strong><span > BRNO UNIVERSITY OF TECHNOLOGY-CZECHIA</span></strong>
+                <small><span >(2015-2016 Fall)</span></small>
+                <br/>
+                <small>
+                    <span class="textInfo" > INFORMATION TECHNOLOGY</span>
+                    <br />
+                    <span class="textInfo"> ERASMUS+ Language:%100 English</span>
+                    <br />
+                </small>
+
+                <span class="fa fa-graduation-cap"></span><strong> <span class="" > SİNOP ANATOLIAN HIGHSCHOOL-TURKEY</span></strong>
+                <small><span >(2007-2011)</span></small>
+            </div>
+            <hr>
+            {#            programming and design#}
+            <div class=" text-center"><h4>Programming and Design Skills</h4></div>
+            <div class="">
+
+                <div class="row text-center" style="margin: 0;padding: 0">
+                    <div class="col-md-6" >
+                        <span >Python - Django-REST</span>
+                        <br>
+                        <span >Java -Android (Native)</span>
+                        <br>
+                        <span >Javascript/JQuery</span>
+                        <br>
+                        <span >MySQL/SQLite</span>
+                    </div>
+                    <div class="col-md-6">
+                        <span >Knime </span>
+                        <br>
+                        <span >CSS/Html</span>
+                        <br>
+                        <span >Blender-Unity-C# </span>
+                        <br>
+                        <span >Ms Project</span>
+                    </div>
+                </div>
+
+            </div>
+            <hr>
+            {#            projects#}
+            <div>
+                <div class=" pt-1 pb-1 text-center"><h4>Sample Project Topics</h4></div>
+                <div  class="cvPart" >
+                    <span  ></span><strong><span >ANDROID SMART MOVIE AND BOOK ARCHIVE / MOVIE QUIZ</span></strong>
+                    <br>
+                    <span class="textInfo" >Java-Android-G-Vision</span>
+                    <br>
+                    <span ></span><strong><span >WEB SCRAPING APPLICATIONS FOR STATISTICAL DATA ANALYSIS</span></strong>
+                    <br>
+                    <span class="textInfo" >Python , BS4,  Scrapy ,JavaScript</span>
+                    <br>
+                    <span ></span><strong><span >SPIDER APPLICATIONS FOR SOCIAL MEDIA</span></strong>
+                    <br>
+                    <span class="textInfo" >Python , Selenium, Phantom JS, BS4,  Scrapy ,JavaScript</span>
+                    <br>
+                    <span ></span><strong><span >AUTOMATION SYSTEMS</span></strong>
+                    <br>
+                    <span class="textInfo" >C#</span>
+                    <br>
+                </div>
+            </div>
+            <hr>
+            {#            languages#}
+            <div class=" pt-1 pb-1 text-center"><h4>Languages</h4></div>
+            <div class=" text-center " >
+
+                <span class="" >Turkish-<small>Mother Tongue</small></span>
+                <br>
+                <span class="" >English-<small>Advanced</small></span>
+            </div>
+            <hr>
+            {#                        experiences#}
+            <div class=" pt-1 pb-1 text-center"><h4>Experience</h4></div>
+            <div class="cvPart" >
+
+
+                <span  ></span><strong><span >KoPlac (Czechia) <small>4 Months/2017</small></span></strong>
+                <br>
+                <span class="textInfo" >IT Specialist & Application Developer</span>
+                <br>
+                <span ></span><strong><span >Efe Eroğlu Bilişim Teknolojileri <small>2 Months/2015</small></span></strong>
+                <br>
+                <span class="textInfo" >Java Application Developer</span>
+            </div>
+            {#footer#}
+
+            <div class=" footer-custom bgH text-center" style="margin-top: 40px; padding: 20px;">
+                <div class="row">
+                    <div class="col md-6">
+                        <h4>Stay Connected</h4>
+                        <i class="fa fa-phone "> <a class="icon-custom-dark" href="tel:05444528469">05444528469</a></i>
+                        <br>
+                        <i class="fa fa-at rounded"> <a class="icon-custom-dark" href="mailto:okan.zdmr1@gmail.com">okan.zdmr1@gmail.com</a></i>
+                        <br>
+                        <i class="fa fa-at"> <a class="icon-custom-dark" href="mailto:okanozdemir@anadolu.edu.tr">okanozdemir@anadolu.edu.tr</a></i>
+                        <br>
+                        <i class="fa fa-map-marker" ></i><span></span> İstanbul/TURKEY<span></span>
+                        <br>
+                        <br>
+                        <div class="social-links mx-auto text-center">
+                            <a href="https://www.linkedin.com/in/okan-ozdemir/?locale=tr_TR" title="linkedin" ><i class="fa  fa-linkedin icon-custom-dark circle-icon" > </i></a>
+                            <a href="https://github.com/okanzdmr"><i class="fa  fa-github icon-custom-dark circle-icon" title="github"> </i></a>
+                            <a href="https://codepen.io/knzdmr"><i class="fa  fa-codepen icon-custom-dark circle-icon" title="codepen"> </i></a>
+                            <a href="https://www.facebook.com/okan.ozdemir.1865"><i class="fa  fa-facebook icon-custom-dark circle-icon" title="facebook"> </i></a>
+                            <a href="https://www.instagram.com/zdmrkn/"><i class="fa  fa-instagram icon-custom-dark circle-icon" title="instagram"> </i></a>
+                        </div>
+                        <br>
+
+
+                    </div>
+                    {#                    #}
+                    <div class="col-md-6 ">
+                        <div class="vertical-center-custom">
+                            <h4>Site Links</h4>
+                            <button  id="button-home" onclick="document.body.scrollTop = 0; document.documentElement.scrollTop = 0;" title="Go to top">Home</button>
+                            <br>
+                            <a class="icon-custom-dark" href="{% url 'project_index' %}">Sample Codes</a>
+                            <br>
+                            <a  class="icon-custom-dark"href="{% url 'blog_index' %}">Blog</a>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                {#                footer info#}
+                <div>
+                    <span>This personal web site has crossplatform support and designed mostly using pure css and javascript codes under <a href="https://www.djangoproject.com">Django</a> web framework. </span>
+                </div>
+
+
+            </div>
+            {# copy right#}
+            <div class="custom-dark text-center " style="background: black">
+                <span> Okan ÖZDEMİR @2019 </span>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+{% endblock %}

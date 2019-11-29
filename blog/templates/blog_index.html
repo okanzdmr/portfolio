@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+
+{% block page_content %}
+
+    <div class="row" style="margin: 0">
+    <div class="col-md-12 bg-black text-light text-center">
+        <h5 class="btn " data-toggle="collapse" data-target="#demo">All Catagories <i class="fa fa-chevron-down"></i></h5>
+
+
+  <div id="demo" class="collapse">
+   {% for category in categories %}
+         <a class ="" style="color:#e2e1db;" href="{% url 'blog_category' category.name %}">
+                {{ category.name }}
+            </a>&nbsp;
+
+        {% endfor %}
+  </div>
+    </div>
+    <div class="col-md-10 offset-md-1 " style="padding: 10px; ">
+ {% for post in posts %}
+
+ <div class=" shadow card" >
+
+        <div class="card-header" style="">
+        <h2><a style="color: #28161C" href="{% url 'blog_detail' post.slug%}">{{ post.title }}</a></h2>
+        </div>
+        <div class="card-body  " style="height: 30vh;overflow: hidden" >
+
+
+        <p class="">{{ post.body | safe  }}</p>
+
+
+        </div>
+         <div class="card-footer">
+          <small>
+            {{ post.created_on.date }} |&nbsp;
+            Categories:&nbsp;
+            {% for category in post.categories.all %}
+            <a style="background:#C42827; color:white;" href="{% url 'blog_category' category.name %}">
+                {{ category.name }}
+            </a>&nbsp;
+            {% endfor %}
+        </small>
+         </div>
+       </div>
+       <br>
+
+    {% endfor %}
+
+    </div>
+    </div>
+
+{% endblock %}

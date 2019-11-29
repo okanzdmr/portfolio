@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+{% block page_content %}
+    <div class="col-md-10 offset-md-1 container shadow" style="padding: 0;">
+        <div class="container card-header" style="">
+            <h1  class="text-center ">{{ post.title }}</h1>
+            <small>
+                {{ post.created_on.date }} |&nbsp;
+                Categories:&nbsp;
+                {% for category in post.categories.all %}
+                    <a href="{% url 'blog_category' category.name %}">
+                        {{ category.name }}
+                    </a>&nbsp;
+                {% endfor %}
+            </small>
+        </div>
+
+        <label style="height: 25px; margin: 0 ;padding: 0 ;" class="container text-center">Reading Mode
+            <input  type="checkbox" id="read-mode" >
+
+        </label>
+    <hr>
+        <div id="blog-content" style="margin: 0;padding: 10px;">
+            {{ post.body | safe | linebreaks }}
+        </div>
+        <div class="card-footer" style="  padding:10px; ">
+            <a class="fa fa-facebook social"href="https://www.facebook.com/sharer/sharer.php?u={{ request.build_absolute_uri }}"></a>
+            <a class="fa fa-linkedin social"href="https://www.linkedin.com/shareArticle?mini=true&url={{ request.build_absolute_uri }}&title={{post.title|urlencode}}"></a>
+            <a class="fa fa-twitter social"href="https://twitter.com/intent/tweet?text=See%20{{post.title|urlencode}}%20on%20{{ request.build_absolute_uri}}"></a>
+
+        </div>
+        <div class="fb-comments" data-href="{{ request.build_absolute_uri}}" data-width="100%" data-numposts="5"></div>
+        {#    <h3>Leave a comment:</h3>#}
+        {#    <form action="/blog/{{ post.pk }}/" method="post">#}
+        {#        {% csrf_token %}#}
+        {#        <div class="form-group">#}
+        {#            {{ form.author }}#}
+        {#        </div>#}
+        {#        <div class="form-group">#}
+        {#            {{ form.body }}#}
+        {#        </div>#}
+        {#        <button type="submit" class="btn btn-primary">Submit</button>#}
+        {#    </form>#}
+        {#    <h3>Comments:</h3>#}
+        {#    {% for comment in comments %}#}
+        {#    <p>#}
+        {#        On {{comment.created_on.date }}&nbsp;#}
+        {#        <b>{{ comment.author }}</b> wrote:#}
+        {#    </p>#}
+        {#    <p>{{ comment.body }}</p>#}
+        {#    <hr>#}
+        {#    {% endfor %}#}
+    </div>
+
+{% endblock %}

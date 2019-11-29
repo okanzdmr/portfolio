@@ -1,0 +1,117 @@
+    div.at-try{
+  width: 180px;
+  height: 160px;
+  display: flex;
+  align-items: center;
+  animation-name:look;
+  animation-duration: 6s;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+}
+@keyframes look {
+  49%{
+    transform: scaleY(1);
+  }
+    50%{
+      transform: scaleY(0);
+    }
+    51%{
+      transform: scaleY(1);
+    }
+    30%{
+      transform: scaleY(1);
+    }
+    31%{
+      transform: scale(0);
+    }
+    32%{transform: scale(1);
+    }
+}
+
+div.at-container {
+  background-color: #fff;
+  position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 160px;
+  width: 150px;
+
+  padding: 40px;
+  border-radius: 250px;
+
+
+}
+.at-item {
+  box-shadow: 0px 10px 40px gray;
+  border:40px;
+  border-style: solid;
+  padding: 5px;
+  margin: 10px;
+  border-color: #006400;
+  width: 30px;
+  height: 30px;
+  border-radius:100px;
+  background-color: #000;
+  animation-name: angry-animation;
+  animation-duration: 2s;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+}
+@keyframes angry-animation {
+  0%{
+    -webkit-transform: translateX(-5) ;
+    transform: translateX(-5);
+  }
+  10%{
+    -webkit-transform: translateX(-10px) rotateY(5deg) ;
+    transform: translateX(-10px) rotateY(5deg);
+
+  }
+  20%{
+    animation-direction: reverse;
+    -webkit-transform: translateX(-20px) rotateY(10deg);
+    transform: translateX(-20px) rotateY(10deg) ;
+
+  }
+  30%{
+    animation-direction: reverse;
+    -webkit-transform: translateX(-30px) rotateY(15deg) ;
+    transform: translateX(-30px) rotateY(15deg);
+
+  }
+  40%{
+    animation-direction: reverse;
+    -webkit-transform:  translateX(-20px) rotateY(10deg);
+    transform: translateX(-20px) rotateY(10deg) ;
+
+  }
+
+  50%{
+
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+  60%{
+    -webkit-transform: translateX(5px) rotateY(5Deg);
+    transform: translateX(5px) rotateY(5deg);
+  }
+  70%{
+    -webkit-transform: translateX(15px) rotateY(10deg);
+    transform: translateX(10px) rotateY(10deg);
+  }
+  80%{
+    -webkit-transform: translateX(20px) rotateY(15deg);
+    transform: translateX(20px) rotateY(15deg);
+  }
+  90%{
+    -webkit-transform: translateX(30px) rotateY(25deg);
+    transform: translateX(30px) rotateY(25deg);
+  }
+  100%{
+    -webkit-transform: translateX(0) ;
+    transform: translateX(0) ;
+  }
+}

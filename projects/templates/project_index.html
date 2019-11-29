@@ -1,0 +1,70 @@
+{% extends "base.html" %}
+
+
+
+{% block css %}
+    {% load static %}
+
+{% endblock %}
+
+
+{% block page_content %}
+
+    {% for a in k %}
+        <div class="container t-1 b-0 l-0 r-0 shadow p-3 testimonial-group ">
+            <div class="text-center justify-content-center t-3 "><h5><a class="text-dark text- justify-content-center"
+                                                                        href="{% url 'project_category' a %}">{{ a }}<span
+                    class="badge badge-dark">{{ a.tech.count }}</span></a></h5></div>
+            <div class="row items test">
+                {% for i in a.tech.all|dictsortreversed:"published_date" %}
+
+                    <div class="card  shadow-sm  col-6 col-md-4 " style=" padding:0; margin:5px; ">
+
+                        <div class="card-image shadow-sm  text-center justify-content-center">
+
+                            <img class="card-img-top   " src="{{ i.model_pic.url }}"
+                                 alt="Card image cap">
+
+                            <a href="{% url "project_detail" i.slug %}">
+                                <div class="custom-dark shadow-sm text-light" style="color:#DCDCDC; background: black;padding: 5px;">
+                                    <span class=" text-overflow text-center  justify-content-center"><strong>{{ i.title }}</strong></span>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class=" noscroll" style="  background:#282C34;padding:5px;color:#DCDCDC;height: 20vh; overflow-y: auto;">
+                            <p>{{ i.description|safe|slice:500 }}...</p>
+                        </div>
+                        <div class="" style="background: #383a39">
+                            {% for t in i.technology.all %}
+
+                                <span><a class="" style="color:white" href="{% url 'project_category' t.title %}">
+              {% if forloop.last %}
+                  {{ t.title }}</a></span>
+              {% else %}
+                  {{ t.title }},</a></span>
+              {% endif %}
+                            {% endfor %}
+                        </div>
+
+                    </div>
+
+
+
+
+
+
+                {% endfor %}
+
+            </div>
+
+        </div>
+        <br>
+
+    {% endfor %}
+
+
+
+
+
+{% endblock %}
